@@ -1,0 +1,113 @@
+/* src/pages/student/Puzzle.css */
+
+:root {
+  --p1: #691883;
+  --p2: #b148d2;
+  --textDark: #2b0835;
+  --textLight: #5a2a6a;
+}
+
+.puzzle-page {
+  min-height: 100vh;
+  padding: 30px 8% 60px;
+  background: linear-gradient(to bottom, #ffffff, #faf4ff);
+  font-family: "Poppins", sans-serif;
+}
+
+.breadcrumb {
+  margin-bottom: 40px;
+}
+
+.home-link {
+  text-decoration: none;
+  color: var(--p1);
+  font-weight: 700;
+}
+
+.puzzle-hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.puzzle-hero h1 {
+  font-size: 52px;
+  font-weight: 900;
+}
+
+.puzzle-hero h1 span {
+  color: var(--p2);
+}
+
+.puzzle-hero p {
+  max-width: 950px;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.9;
+  color: var(--textLight);
+}
+
+.questions-section {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.question-card {
+  background: white;
+  padding: 35px;
+  border-radius: 24px;
+  border: 1px solid #f0d9ff;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin: 30px 0;
+}
+
+.option-box {
+  background: #f8f5fa;
+  padding: 20px 24px;
+  border-radius: 18px;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.option-circle {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 2px solid var(--p1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--p1);
+  font-weight: 700;
+  background: white;
+}
+
+.answer-btn {
+  border: none;
+  padding: 14px 28px;
+  border-radius: 12px;
+  background: linear-gradient(45deg, var(--p1), var(--p2));
+  color: white;
+  cursor: pointer;
+}
+
+.correct {
+  background: #d4f8d4 !important;
+}
+
+.wrong {
+  background: #ffd6d6 !important;
+}
+
+.correct-answer {
+  margin-top: 18px;
+  color: #1faa59;
+  font-weight: 700;
+}

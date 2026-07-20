@@ -1,0 +1,119 @@
+.company-page {
+  padding: 40px 8%;
+  background: #fff;
+  min-height: 100vh;
+}
+
+.back-btn {
+  text-decoration: none;
+  color: #7b2cbf;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.hero-card {
+  background: #faf7ff;
+  border-left: 5px solid #7b2cbf;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.hero-card h1 {
+  color: #2d0b4e;
+  margin-bottom: 20px;
+}
+
+.hero-card h3 {
+  margin-top: 20px;
+  color: #4b0082;
+}
+
+.hero-card ul {
+  padding-left: 20px;
+}
+
+.hero-card li {
+  margin: 10px 0;
+}
+
+.table-section {
+  margin-bottom: 40px;
+}
+
+.table-section h2 {
+  color: #2d0b4e;
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #e9d8fd;
+}
+
+th,
+td {
+  padding: 14px;
+  border: 1px solid #eee;
+  text-align: left;
+}
+
+.tabs-section {
+  background: #fff;
+}
+
+.tabs-section h2 {
+  color: #2d0b4e;
+  margin-bottom: 20px;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.tabs button {
+  padding: 10px 18px;
+  border: none;
+  background: #f3f3f3;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.tabs button.active {
+  background: #7b2cbf;
+  color: white;
+}
+
+.tab-content {
+  background: #fafafa;
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.tab-content h3 {
+  color: #4b0082;
+  margin-bottom: 15px;
+}
+
+.tab-content ul {
+  padding-left: 20px;
+}
+
+.tab-content li {
+  margin-bottom: 10px;
+}
+
+.info {
+  margin-top: 20px;
+  font-weight: 600;
+  color: #7b2cbf;
+}

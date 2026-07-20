@@ -1,0 +1,230 @@
+.roadmap-page {
+  min-height: 100vh;
+  padding: 30px 7% 60px;
+  background: linear-gradient(to bottom, #ffffff, #faf4ff);
+  font-family: "Poppins", sans-serif;
+}
+
+.roadmap-back {
+  text-decoration: none;
+  color: #691883;
+  font-weight: 800;
+}
+
+.roadmap-hero {
+  text-align: center;
+  margin: 25px 0 45px;
+}
+
+.roadmap-hero span {
+  background: #f0dcff;
+  color: #7b22c9;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.roadmap-hero h1 {
+  font-size: 58px;
+  color: #1f1230;
+  margin: 18px 0 10px;
+}
+
+.roadmap-hero h1 b {
+  color: #8d27cf;
+}
+
+.roadmap-hero p {
+  font-size: 18px;
+  color: #5a2a6a;
+}
+
+.roadmap-section {
+  background: white;
+  border-radius: 24px;
+  padding: 30px;
+  margin-bottom: 34px;
+  border: 1px solid #eadcff;
+  box-shadow: 0 14px 35px rgba(105, 24, 131, 0.08);
+}
+
+.roadmap-title h2 {
+  font-size: 27px;
+  margin-bottom: 6px;
+}
+
+.roadmap-title p {
+  color: #5a2a6a;
+  font-weight: 600;
+}
+
+.purple .roadmap-title h2,
+.purple .step-number,
+.purple .detail-card h3 {
+  color: #7b22c9;
+}
+
+.green .roadmap-title h2,
+.green .step-number,
+.green .detail-card h3 {
+  color: #0f8a54;
+}
+
+.blue .roadmap-title h2,
+.blue .step-number,
+.blue .detail-card h3 {
+  color: #2563eb;
+}
+
+.timeline {
+  display: flex;
+  gap: 24px;
+  margin: 35px 0 30px;
+  overflow-x: auto;
+  padding-bottom: 15px;
+}
+
+.timeline-step {
+  min-width: 135px;
+  position: relative;
+  text-align: center;
+}
+
+.timeline-step::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 86px;
+  width: 95px;
+  border-top: 2px dashed #c78ee8;
+}
+
+.timeline-step:last-child::after {
+  display: none;
+}
+
+.step-number {
+  width: 38px;
+  height: 38px;
+  background: #f4e8ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  font-weight: 900;
+}
+
+.step-box {
+  margin-top: 18px;
+  background: #fbf7ff;
+  padding: 18px 12px;
+  border-radius: 16px;
+  border: 1px dashed #d8b4fe;
+  min-height: 120px;
+}
+
+.step-box h3 {
+  color: #2b0835;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.step-box p {
+  color: #5a2a6a;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.detail-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 18px;
+  border: 1px solid #eadcff;
+  box-shadow: 0 8px 20px rgba(105, 24, 131, 0.06);
+}
+
+.detail-card h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.detail-card p {
+  color: #5a2a6a;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.tips-section {
+  background: white;
+  border-radius: 24px;
+  padding: 30px;
+  border: 1px solid #eadcff;
+  box-shadow: 0 14px 35px rgba(105, 24, 131, 0.08);
+}
+
+.tips-section h2 {
+  color: #691883;
+  margin-bottom: 22px;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.tip-card {
+  background: #fbf4ff;
+  padding: 18px;
+  border-radius: 16px;
+}
+
+.tip-card h3 {
+  color: #2b0835;
+  margin-bottom: 8px;
+}
+
+.tip-card p {
+  color: #5a2a6a;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.quote-box {
+  margin-top: 25px;
+  text-align: center;
+  background: #f4e8ff;
+  color: #691883;
+  padding: 18px;
+  border-radius: 16px;
+  font-weight: 900;
+}
+
+@media (max-width: 1000px) {
+  .detail-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tips-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .roadmap-hero h1 {
+    font-size: 40px;
+  }
+
+  .detail-grid,
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+}

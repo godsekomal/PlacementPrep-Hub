@@ -1,0 +1,202 @@
+// src/pages/student/HCFLCM.jsx
+
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "./HCFLCM.css";
+import axiosInstance from "../../utils/axiosInstance";
+export default function HCFLCM() {
+
+  const [selectedAnswers, setSelectedAnswers] = useState({});
+  const [showAnswers, setShowAnswers] = useState({});
+const [finalScore, setFinalScore] = useState(null);
+  const questions = [
+    {
+      question: "Find the HCF of 18 and 24.",
+      options: ["2", "4", "6", "8"],
+      answer: "6",
+    },
+
+    {
+      question: "Find the LCM of 6 and 8.",
+      options: ["12", "18", "24", "48"],
+      answer: "24",
+    },
+
+    {
+      question: "HCF of two co-prime numbers is:",
+      options: ["0", "1", "2", "Prime"],
+      answer: "1",
+    },
+
+    {
+      question: "Find the HCF of 20 and 30.",
+      options: ["5", "10", "15", "20"],
+      answer: "10",
+    },
+
+    {
+      question: "Find the LCM of 5 and 10.",
+      options: ["5", "10", "15", "20"],
+      answer: "10",
+    },
+
+    {
+      question: "LCM of two prime numbers is:",
+      options: ["Their sum", "Their product", "1", "0"],
+      answer: "Their product",
+    },
+  ];
+
+  const handleOptionClick = (questionIndex, option) => {
+    setSelectedAnswers({
+      ...selectedAnswers,
+      [questionIndex]: option,
+    });
+  };
+
+  const handleViewAnswer = (questionIndex) => {
+    setShowAnswers({
+      ...showAnswers,
+      [questionIndex]: true,
+    });
+  };
+const handleSubmitTest = async () => {
+  let score = 0;
+
+  questions.forEach((q, index) => {
+    if (selectedAnswers[index] === q.answer) {
+      score++;
+    }
+  });
+
+  setFinalScore(score);
+
+  try {
+    await axiosInstance.post("/api/aptitude-feedback/save", {
+      topic: "HCF and LCM",
+      score,
+      totalQuestions: questions.length,
+      percentage: (score / questions.length) * 100,
+    });
+  } catch (error) {
+    console.log("Score save error:", error);
+  }
+};
+
+  return (
+    <div className="hcf-page">
+
+      <div className="breadcrumb">
+
+        <Link to="/" className="home-link">
+          Home
+        </Link>
+
+        <span> / </span>
+
+        <Link to="/student/aptitude" className="home-link">
+          Aptitude Practice
+        </Link>
+
+        <span> / HCF and LCM</span>
+
+      </div>
+
+      <div className="hcf-hero">
+
+        <h1>
+          HCF & <span>LCM</span>
+        </h1>
+
+        <p>
+          HCF and LCM helps students solve divisibility and factorization
+          problems quickly. It improves mathematical ability required for
+          placement aptitude exams.
+        </p>
+
+      </div>
+
+      <div className="questions-section">
+
+        {questions.map((q, index) => (
+
+          <div className="question-card" key={index}>
+
+            <h2>
+              Q{index + 1}. {q.question}
+            </h2>
+
+            <div className="options-grid">
+
+              {q.options.map((option, i) => {
+
+                const selected = selectedAnswers[index] === option;
+                const correct = option === q.answer;
+
+                return (
+                  <div
+                    key={i}
+                    className={`option-box
+                      ${selected && correct ? "correct" : ""}
+                      ${selected && !correct ? "wrong" : ""}
+                    `}
+                    onClick={() =>
+                      handleOptionClick(index, option)
+                    }
+                  >
+
+                    <div className="option-circle">
+                      {String.fromCharCode(65 + i)}
+                    </div>
+
+                    <span>{option}</span>
+
+                  </div>
+                );
+              })}
+
+            </div>
+
+            <button
+              className="answer-btn"
+              onClick={() => handleViewAnswer(index)}
+            >
+              View Answer
+            </button>
+
+            {showAnswers[index] && (
+              <p className="correct-answer">
+                Correct Answer: {q.answer}
+              </p>
+            )}
+
+          </div>
+
+        ))}
+
+      </div>
+      <button
+        className="submit-test-btn"
+        onClick={handleSubmitTest}
+      >
+        Submit Test
+      </button>
+
+      {finalScore !== null && (
+        <div className="score-card">
+
+          <h2>
+            Your Score: {finalScore} / {questions.length}
+          </h2>
+
+          <p>
+            {finalScore >= 4
+              ? "Excellent! You have good understanding of HCF & LCM."
+              : "Keep practicing HCF & LCM questions."}
+          </p>
+
+        </div>
+      )}
+    </div>
+  );
+}

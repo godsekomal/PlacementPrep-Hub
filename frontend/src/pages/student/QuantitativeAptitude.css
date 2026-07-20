@@ -1,0 +1,177 @@
+/* src/pages/student/QuantitativeAptitude.css */
+
+:root {
+  --p1: #691883;
+  --p2: #b148d2;
+  --p3: #e79aff;
+  --p4: #f3ccff;
+  --p5: #fbeeff;
+
+  --textDark: #2b0835;
+  --textLight: #5a2a6a;
+}
+
+.quant-page {
+  min-height: 100vh;
+  padding: 30px 8% 60px;
+  background: linear-gradient(to bottom, #ffffff, #faf4ff);
+  font-family: "Poppins", sans-serif;
+}
+
+/* BREADCRUMB */
+
+.breadcrumb {
+  margin-bottom: 40px;
+
+  font-size: 15px;
+
+  color: #777;
+}
+
+.home-link {
+  text-decoration: none;
+
+  color: var(--p1);
+
+  font-weight: 700;
+}
+
+.home-link:hover {
+  text-decoration: underline;
+}
+
+/* HERO */
+
+.quant-hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.quant-hero h1 {
+  font-size: 52px;
+  font-weight: 900;
+
+  color: var(--textDark);
+
+  margin-bottom: 18px;
+}
+
+.quant-hero h1 span {
+  color: var(--p2);
+}
+
+.quant-hero p {
+  font-size: 18px;
+
+  line-height: 1.9;
+
+  color: var(--textLight);
+
+  max-width: 950px;
+
+  margin: auto;
+}
+
+/* TOPICS */
+
+.topics-section h2 {
+  text-align: center;
+
+  font-size: 36px;
+
+  font-weight: 800;
+
+  color: var(--textDark);
+
+  margin-bottom: 40px;
+}
+
+/* GRID */
+
+.topics-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 28px;
+}
+
+/* CARD */
+
+.topic-card {
+  background: white;
+
+  border-radius: 22px;
+
+  padding: 30px 25px;
+
+  border: 1px solid #f0d9ff;
+
+  box-shadow: 0 10px 30px rgba(105, 24, 131, 0.08);
+
+  transition: 0.3s;
+
+  text-align: center;
+}
+
+.topic-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 18px 40px rgba(105, 24, 131, 0.14);
+}
+
+.topic-card h3 {
+  font-size: 22px;
+
+  font-weight: 800;
+
+  color: var(--textDark);
+
+  margin-bottom: 22px;
+}
+
+/* BUTTON */
+
+.practice-btn {
+  border: none;
+
+  outline: none;
+
+  padding: 13px 24px;
+
+  border-radius: 12px;
+
+  background: linear-gradient(45deg, var(--p1), var(--p2));
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.practice-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .quant-hero h1 {
+    font-size: 38px;
+  }
+
+  .quant-hero p {
+    font-size: 16px;
+  }
+
+  .topics-section h2 {
+    font-size: 28px;
+  }
+
+}

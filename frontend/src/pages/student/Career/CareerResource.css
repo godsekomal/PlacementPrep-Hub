@@ -1,0 +1,76 @@
+.career-resource-page {
+  min-height: 100vh;
+  padding: 35px 8% 70px;
+  background: linear-gradient(to bottom, #ffffff, #faf4ff);
+  font-family: "Poppins", sans-serif;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 35px;
+  text-decoration: none;
+  color: #691883;
+  font-weight: 800;
+}
+
+.career-hero {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.career-hero h1 {
+  font-size: 54px;
+  font-weight: 900;
+  color: #2b0835;
+}
+
+.career-hero h1 span {
+  color: #b148d2;
+}
+
+.career-hero p {
+  max-width: 850px;
+  margin: 15px auto 0;
+  font-size: 18px;
+  color: #5a2a6a;
+  line-height: 1.8;
+}
+
+.career-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.career-card {
+  background: white;
+  padding: 30px;
+  border-radius: 24px;
+  border: 1px solid #f0d9ff;
+  box-shadow: 0 12px 32px rgba(105, 24, 131, 0.08);
+}
+
+.career-card h2 {
+  color: #2b0835;
+  margin-bottom: 20px;
+}
+
+.career-card p {
+  background: #fbf4ff;
+  padding: 13px 16px;
+  border-radius: 14px;
+  color: #5a2a6a;
+  font-weight: 700;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 768px) {
+  .career-hero h1 {
+    font-size: 38px;
+  }
+
+  .career-grid {
+    grid-template-columns: 1fr;
+  }
+}

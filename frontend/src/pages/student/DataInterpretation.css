@@ -1,0 +1,191 @@
+/* src/pages/student/DataInterpretation.css */
+
+:root {
+  --p1: #691883;
+  --p2: #b148d2;
+  --p3: #e79aff;
+  --p4: #f3ccff;
+  --p5: #fbeeff;
+
+  --textDark: #2b0835;
+  --textLight: #5a2a6a;
+}
+
+.di-page {
+  min-height: 100vh;
+  padding: 30px 8% 60px;
+
+  background: linear-gradient(to bottom, #ffffff, #faf4ff);
+
+  font-family: "Poppins", sans-serif;
+}
+
+/* BREADCRUMB */
+
+.breadcrumb {
+  margin-bottom: 40px;
+
+  font-size: 15px;
+
+  color: #777;
+}
+
+.home-link {
+  text-decoration: none;
+
+  color: var(--p1);
+
+  font-weight: 700;
+}
+
+.home-link:hover {
+  text-decoration: underline;
+}
+
+/* HERO */
+
+.di-hero {
+  text-align: center;
+
+  margin-bottom: 60px;
+}
+
+.di-hero h1 {
+  font-size: 52px;
+
+  font-weight: 900;
+
+  color: var(--textDark);
+
+  margin-bottom: 18px;
+}
+
+.di-hero h1 span {
+  color: var(--p2);
+}
+
+.di-hero p {
+  max-width: 950px;
+
+  margin: auto;
+
+  font-size: 18px;
+
+  line-height: 1.9;
+
+  color: var(--textLight);
+}
+
+/* TOPICS */
+
+.topics-section h2 {
+  font-size: 34px;
+
+  color: var(--textDark);
+
+  margin-bottom: 35px;
+
+  text-align: center;
+}
+
+.topics-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 28px;
+}
+
+/* CARD */
+
+.topic-card {
+  background: white;
+
+  border-radius: 24px;
+
+  padding: 35px 28px;
+
+  border: 1px solid #f1dfff;
+
+  box-shadow: 0 10px 30px rgba(105, 24, 131, 0.08);
+
+  transition: 0.3s;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+}
+
+.topic-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 18px 40px rgba(105, 24, 131, 0.14);
+}
+
+.topic-card h3 {
+  font-size: 24px;
+
+  font-weight: 800;
+
+  color: var(--textDark);
+
+  margin-bottom: 16px;
+}
+
+.topic-card p {
+  font-size: 15px;
+
+  line-height: 1.8;
+
+  color: #666;
+
+  margin-bottom: 24px;
+}
+
+/* BUTTON */
+
+.start-btn {
+  border: none;
+
+  outline: none;
+
+  padding: 14px 24px;
+
+  border-radius: 12px;
+
+  background: linear-gradient(45deg, var(--p1), var(--p2));
+
+  color: white;
+
+  margin: 0 auto;
+
+  display: block;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.start-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .di-hero h1 {
+    font-size: 38px;
+  }
+
+  .di-hero p {
+    font-size: 16px;
+  }
+
+}

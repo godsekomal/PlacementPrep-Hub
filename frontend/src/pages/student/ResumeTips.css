@@ -1,0 +1,135 @@
+.resume-page {
+  min-height: 100vh;
+  padding: 40px 8%;
+  background: #faf7ff;
+}
+
+.back-btn {
+  text-decoration: none;
+  color: #691883;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.resume-hero {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.resume-hero h1 {
+  font-size: 55px;
+  color: #2b0835;
+}
+
+.resume-hero span {
+  color: #b148d2;
+}
+
+.resume-hero p {
+  margin-top: 15px;
+  color: #666;
+  font-size: 18px;
+}
+
+.resume-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 30px;
+}
+
+.resume-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.resume-card {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  border: 2px solid #f0d9ff;
+  box-shadow: 0 10px 25px rgba(105, 24, 131, 0.08);
+  transition: 0.3s;
+}
+
+.resume-card:hover {
+  transform: translateY(-8px);
+}
+
+.resume-card h2 {
+  color: #691883;
+  margin-bottom: 20px;
+}
+
+.resume-card ul {
+  padding-left: 20px;
+}
+
+.resume-card li {
+  margin-bottom: 12px;
+  color: #555;
+}
+
+.resume-checklist {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  height: fit-content;
+  border: 2px solid #f0d9ff;
+  box-shadow: 0 10px 25px rgba(105, 24, 131, 0.08);
+}
+
+.resume-checklist h2 {
+  color: #691883;
+  margin-bottom: 20px;
+}
+
+.resume-checklist p {
+  margin-bottom: 12px;
+  color: #555;
+}
+
+.sample-resume {
+  margin-top: 40px;
+}
+
+.sample-resume h2 {
+  color: #2b0835;
+  margin-bottom: 20px;
+}
+
+.sample-box {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  border: 2px solid #f0d9ff;
+  box-shadow: 0 10px 25px rgba(105, 24, 131, 0.08);
+}
+
+.sample-box h3 {
+  color: #691883;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.sample-box p {
+  color: #555;
+  line-height: 1.8;
+}
+
+@media (max-width: 900px) {
+
+  .resume-container {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-content {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-hero h1 {
+    font-size: 40px;
+  }
+
+}

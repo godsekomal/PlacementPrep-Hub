@@ -1,0 +1,338 @@
+/* src/pages/student/InterviewPractice.css */
+
+:root {
+
+  --p1: #691883;
+  --p2: #b148d2;
+  --textDark: #2b0835;
+  --textLight: #5a2a6a;
+}
+
+.interview-page {
+
+  min-height: 100vh;
+
+  padding: 40px 8%;
+
+  background:
+    linear-gradient(to bottom, #ffffff, #faf4ff);
+
+  font-family: "Poppins", sans-serif;
+}
+.simple-back {
+  display: inline-block;
+  margin-bottom: 25px;
+  color: #6b21a8;
+  font-size: 18px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.simple-back:hover {
+  color: #7e22ce;
+  transform: translateX(-4px);
+}
+
+/* HERO */
+
+.interview-hero {
+
+  text-align: center;
+
+  margin-bottom: 50px;
+}
+
+.interview-hero h1 {
+
+  font-size: 56px;
+
+  font-weight: 900;
+
+  color: var(--textDark);
+
+  margin-bottom: 18px;
+}
+
+.interview-hero h1 span {
+
+  color: var(--p2);
+}
+
+.interview-hero p {
+
+  max-width: 850px;
+
+  margin: auto;
+
+  font-size: 18px;
+
+  line-height: 1.8;
+
+  color: var(--textLight);
+}
+
+/* SETUP CARD */
+
+.setup-card {
+
+  max-width: 650px;
+
+  margin: auto;
+
+  background: white;
+
+  padding: 40px;
+
+  border-radius: 25px;
+
+  box-shadow:
+    0 10px 30px rgba(105,24,131,0.08);
+}
+
+.setup-card h2 {
+
+  text-align: center;
+
+  margin-bottom: 30px;
+
+  color: var(--textDark);
+}
+
+/* AVATAR */
+
+.avatar-section {
+
+  text-align: center;
+
+  margin-bottom: 30px;
+}
+
+.avatar-buttons {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 20px;
+
+  margin: 20px 0;
+}
+
+.avatar-buttons button {
+
+  padding: 12px 24px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  font-weight: 700;
+
+  background: #ddd;
+}
+
+.active-avatar {
+
+  background:
+    linear-gradient(45deg, var(--p1), var(--p2));
+
+  color: white !important;
+}
+
+.avatar-image {
+
+  width: 160px;
+
+  height: 160px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  border: 4px solid var(--p1);
+}
+
+/* SELECT */
+
+.select-group {
+
+  display: flex;
+
+  flex-direction: column;
+
+  margin-bottom: 25px;
+}
+
+.select-group label {
+
+  margin-bottom: 10px;
+
+  font-weight: 700;
+
+  color: var(--textDark);
+}
+
+.select-group select {
+
+  padding: 14px;
+
+  border-radius: 12px;
+
+  border: 1px solid #ddd;
+
+  font-size: 16px;
+}
+
+/* BUTTON */
+
+.start-btn,
+.submit-btn {
+
+  width: 100%;
+
+  border: none;
+
+  padding: 16px;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(45deg, var(--p1), var(--p2));
+
+  color: white;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.start-btn:hover,
+.submit-btn:hover {
+
+  transform: translateY(-2px);
+}
+
+/* QUESTION */
+
+.question-card {
+
+  max-width: 900px;
+
+  margin: auto;
+
+  background: white;
+
+  padding: 40px;
+
+  border-radius: 25px;
+
+  box-shadow:
+    0 10px 30px rgba(105,24,131,0.08);
+}
+
+.progress {
+
+  margin: 25px 0;
+
+  font-weight: 700;
+
+  color: var(--p2);
+}
+
+.question-card h2 {
+
+  margin-bottom: 25px;
+
+  color: var(--textDark);
+}
+
+.question-card textarea {
+
+  width: 100%;
+
+  padding: 18px;
+
+  border-radius: 15px;
+
+  border: 1px solid #ddd;
+
+  font-size: 16px;
+
+  resize: none;
+
+  margin-bottom: 25px;
+}
+
+/* FEEDBACK */
+
+.feedback-box {
+
+  margin-top: 25px;
+
+  padding: 20px;
+
+  border-radius: 15px;
+
+  background: #f8f0ff;
+}
+
+/* RESULT */
+
+.result-card {
+
+  max-width: 600px;
+
+  margin: auto;
+
+  text-align: center;
+
+  background: white;
+
+  padding: 50px;
+
+  border-radius: 25px;
+
+  box-shadow:
+    0 10px 30px rgba(105,24,131,0.08);
+}
+
+.result-card h1 {
+
+  font-size: 70px;
+
+  color: var(--p2);
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .interview-hero h1 {
+
+    font-size: 40px;
+  }
+
+  .setup-card,
+  .question-card,
+  .result-card {
+
+    padding: 25px;
+  }
+
+  .avatar-buttons {
+
+    flex-direction: column;
+  }
+
+}

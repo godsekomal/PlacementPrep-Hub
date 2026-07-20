@@ -1,0 +1,265 @@
+.weekly-page {
+  min-height: 100vh;
+  padding: 40px 8% 70px;
+  background:
+    radial-gradient(circle at top left, rgba(177, 72, 210, 0.16), transparent 35%),
+    linear-gradient(to bottom, #ffffff, #faf4ff);
+  font-family: "Poppins", sans-serif;
+}
+.simple-back {
+  background: transparent;
+  border: none;
+  color: #6d28d9;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 25px;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.simple-back:hover {
+  color: #7c3aed;
+  transform: translateX(-4px);
+}
+.weekly-hero {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.weekly-hero h1 {
+  font-size: 56px;
+  font-weight: 900;
+  color: #2b0835;
+}
+
+.weekly-hero h1 span {
+  color: #b148d2;
+}
+
+.weekly-hero p {
+  max-width: 900px;
+  margin: 15px auto 0;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #5a2a6a;
+}
+
+.report-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  margin-bottom: 35px;
+}
+
+.report-card {
+  background: white;
+  padding: 28px;
+  border-radius: 24px;
+  border: 1px solid #f0d9ff;
+  box-shadow: 0 14px 35px rgba(105, 24, 131, 0.08);
+}
+
+.report-card h3 {
+  color: #5a2a6a;
+  font-size: 17px;
+  margin-bottom: 12px;
+}
+
+.report-card h2 {
+  color: #691883;
+  font-size: 42px;
+  margin-bottom: 8px;
+}
+
+.report-card p {
+  color: #7b5a88;
+  font-weight: 600;
+}
+
+.weekly-section {
+  background: white;
+  padding: 32px;
+  border-radius: 26px;
+  border: 1px solid #f0d9ff;
+  box-shadow: 0 14px 35px rgba(105, 24, 131, 0.08);
+  margin-bottom: 30px;
+}
+
+.weekly-section h2 {
+  color: #2b0835;
+  margin-bottom: 24px;
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.overview-card {
+  background: linear-gradient(135deg, #691883, #b148d2);
+  color: white;
+  padding: 26px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.overview-card h3 {
+  font-size: 17px;
+  margin-bottom: 12px;
+}
+
+.overview-card span {
+  font-size: 38px;
+  font-weight: 900;
+}
+
+.topic-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.bar-row {
+  display: grid;
+  grid-template-columns: 170px 1fr 60px;
+  align-items: center;
+  gap: 18px;
+}
+
+.bar-row p {
+  font-weight: 800;
+  color: #2b0835;
+}
+
+.bar-row span {
+  font-weight: 900;
+  color: #691883;
+}
+
+.bar-bg {
+  height: 16px;
+  background: #ead8f4;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(45deg, #691883, #b148d2);
+}
+
+.bar-fill.weak {
+  background: linear-gradient(45deg, #ff6b6b, #ff9f9f);
+}
+
+.weekly-two-column {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.topic-line {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.strong {
+  color: #1faa59;
+}
+
+.weak-text {
+  color: #e54848;
+}
+
+.muted {
+  color: #7b5a88;
+  font-weight: 600;
+}
+
+.empty-box {
+  background: #fbf4ff;
+  padding: 25px;
+  border-radius: 18px;
+  color: #5a2a6a;
+  font-weight: 700;
+}
+
+.recent-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.recent-card {
+  background: #fbf4ff;
+  padding: 22px;
+  border-radius: 18px;
+}
+
+.recent-card h3 {
+  color: #2b0835;
+  margin-bottom: 10px;
+}
+
+.recent-card p {
+  color: #5a2a6a;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.recent-card small {
+  color: #7b5a88;
+}
+
+.recommendation-card {
+  background: linear-gradient(135deg, #691883, #b148d2);
+  color: white;
+  padding: 35px;
+  border-radius: 28px;
+  box-shadow: 0 18px 40px rgba(105, 24, 131, 0.18);
+}
+
+.recommendation-card h2 {
+  margin-bottom: 18px;
+}
+
+.recommendation-card p {
+  line-height: 1.8;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 992px) {
+  .report-grid,
+  .overview-grid,
+  .weekly-two-column,
+  .recent-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .weekly-hero h1 {
+    font-size: 40px;
+  }
+
+  .report-grid,
+  .overview-grid,
+  .weekly-two-column,
+  .recent-list {
+    grid-template-columns: 1fr;
+  }
+
+  .weekly-section {
+    padding: 24px;
+  }
+
+  .bar-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}

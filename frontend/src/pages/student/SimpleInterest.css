@@ -1,0 +1,145 @@
+/* src/pages/student/SimpleInterest.css */
+
+:root {
+  --p1: #691883;
+  --p2: #b148d2;
+  --textDark: #2b0835;
+  --textLight: #5a2a6a;
+}
+
+.si-page {
+  min-height: 100vh;
+  padding: 30px 8% 60px;
+  background: linear-gradient(to bottom, #ffffff, #faf4ff);
+  font-family: "Poppins", sans-serif;
+}
+
+.breadcrumb {
+  margin-bottom: 40px;
+  font-size: 15px;
+  color: #777;
+}
+
+.home-link {
+  text-decoration: none;
+  color: var(--p1);
+  font-weight: 700;
+}
+
+.home-link:hover {
+  text-decoration: underline;
+}
+
+.si-hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.si-hero h1 {
+  font-size: 52px;
+  font-weight: 900;
+  color: var(--textDark);
+  margin-bottom: 18px;
+}
+
+.si-hero h1 span {
+  color: var(--p2);
+}
+
+.si-hero p {
+  max-width: 950px;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.9;
+  color: var(--textLight);
+}
+
+.questions-section {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.question-card {
+  background: white;
+  padding: 35px;
+  border-radius: 24px;
+  border: 1px solid #f0d9ff;
+  box-shadow: 0 10px 30px rgba(105, 24, 131, 0.08);
+}
+
+.question-card h2 {
+  font-size: 24px;
+  color: var(--textDark);
+  margin-bottom: 30px;
+  line-height: 1.7;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin-bottom: 30px;
+}
+
+.option-box {
+  background: #f8f5fa;
+  border-radius: 18px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.option-box:hover {
+  background: #f1e4ff;
+}
+
+.option-circle {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 2px solid var(--p1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--p1);
+  background: white;
+}
+
+.option-box span {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--textDark);
+}
+
+.answer-btn {
+  border: none;
+  padding: 14px 28px;
+  border-radius: 12px;
+  background: linear-gradient(45deg, var(--p1), var(--p2));
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.correct {
+  background: #d4f8d4 !important;
+  border: 2px solid #1faa59;
+}
+
+.wrong {
+  background: #ffd6d6 !important;
+  border: 2px solid #ff4d4d;
+}
+
+.correct-answer {
+  margin-top: 18px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1faa59;
+}
